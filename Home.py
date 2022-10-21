@@ -20,3 +20,5 @@ st.dataframe(dx)
 
 dt=pd.read_csv("/data/iris.csv")
 st.dataframe(dt)
+st.sidebar.markdown("# วิเคราะห์รายบุคคล ")
+
