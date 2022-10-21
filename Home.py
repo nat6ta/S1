@@ -16,3 +16,4 @@ st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 dx=pd.read_excel('./data/gen.xlsx')
 st.dataframe(dx)
+
