@@ -27,7 +27,7 @@ dt3=dt['sepal.length'].sum()
 dt4=dt['sepal.width'].sum()
 dx=[dt1,dt2,dt3,dt4]
 dx2=pd.DataFrame(dx,index=["dt1","dt2","dt3","dt4"])
-st.bar_chart(dt2)
+st.bar_chart(dx2)
 st.balloons()
 
 st.sidebar.markdown("# วิเคราะห์รายบุคคล ")
