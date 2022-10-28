@@ -30,5 +30,6 @@ dx2=pd.DataFrame(dx,index=["dt1","dt2","dt3","dt4"])
 st.bar_chart(dx2)
 st.balloons()
 
+
 st.sidebar.markdown("# วิเคราะห์รายบุคคล ")
 
