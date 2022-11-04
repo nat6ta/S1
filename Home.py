@@ -12,7 +12,7 @@ html_8="""
 <center><h5>การทำนายข้อมูลดอกไม้</h5></center>
 </div>
 """
-
+st.image('./pic/add.jpg')
 
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
