@@ -13,6 +13,7 @@ html_8="""
 </div>
 """
 
+
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 
@@ -56,6 +57,12 @@ if  st.button("ทำนายผล]"):
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction[0])
+    if prediction == 'Versicolor':
+        st.image('./pic/versicolor.jpg')
+    elif prediction == 'virginica':
+        st.image('./pic/virginica.jpg')
+    else:
+        st.image('./pic/setosa.jpg')
     st.button("ไม่แสดงข้อมูล")
 else:
     st.write("ไม่แสดงผลการทำนาย")
