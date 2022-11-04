@@ -44,8 +44,8 @@ st.markdown("")
 
 st_len = st.slider("กรุณาเลือกข้อมูล sepal.length")
 sd = st.slider("กรุณาเลือกข้อมูล sepal.width")
-pt_len = st.slider("กรุณาเลือกข้อมูล petal.length")
-wd = st.slider("กรุณาเลือกข้อมูล petal.width")
+pt_len = st.number_input("กรุณาเลือกข้อมูล petal.length")
+wd = st.number_input("กรุณาเลือกข้อมูล petal.width")
 
 if  st.button("ทำนายผล]"):
     st.markdown("ใส่โมเดล")
