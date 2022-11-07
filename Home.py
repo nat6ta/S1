@@ -48,18 +48,18 @@ html_8="""
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 
-st_len = st.slider("กรุณาเลือกข้อมูล Pregnancies")
-sd = st.slider("กรุณาเลือกข้อมูล Glucose")
-pt_len = st.number_input("กรุณาเลือกข้อมูล BloodPressure")
-wd = st.number_input("กรุณาเลือกข้อมูล SkinThickness")
-pt_len = st.number_input("กรุณาเลือกข้อมูล Insulin")
-wd = st.number_input("กรุณาเลือกข้อมูล BMI")
-wd = st.number_input("กรุณาเลือกข้อมูล DiabetesPedigreeFunction")
-pt_len = st.number_input("กรุณาเลือกข้อมูล Age")
+pg = st.slider("กรุณาเลือกข้อมูล Pregnancies")
+gs = st.slider("กรุณาเลือกข้อมูล Glucose")
+bp = st.number_input("กรุณาเลือกข้อมูล BloodPressure")
+sk = st.number_input("กรุณาเลือกข้อมูล SkinThickness")
+iu = st.number_input("กรุณาเลือกข้อมูล Insulin")
+bi = st.number_input("กรุณาเลือกข้อมูล BMI")
+dr = st.number_input("กรุณาเลือกข้อมูล DiabetesPedigreeFunction")
+ae = st.number_input("กรุณาเลือกข้อมูล Age")
 
 if  st.button("ทำนายผล]"):
     loaded_model = pickle.load(open('./data/trained_model.sav', 'rb'))
-    input_data =  (st_len,sd,pt_len,wd)
+    input_data =  (pg,gs,bp,sk,iu,bi,dr,ae)
     # changing the input_data to numpy array
     input_data_as_numpy_array = np.asarray(input_data)
     # reshape the array as we are predicting for one instance
