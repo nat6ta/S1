@@ -9,10 +9,9 @@ import pickle
 
 html_8="""
 <div style="background-color:#B160EC;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<center><h5>การทำนายข้อมูลดอกไม้</h5></center>
+<center><h5>การทำนายข้อมูลการเป็นโรคหัวใจ</h5></center>
 </div>
 """
-st.image('./pic/add.png')
 
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
@@ -31,7 +30,6 @@ dt8=dt['Age'].sum()
 dx=[dt1,dt2,dt3,dt4,dt5,dt6,dt7,dt8]
 dx2=pd.DataFrame(dx,index=["dt1","dt2","dt3","dt4","dt5","dt6","dt7","dt8"])
 
-
 if st.button("แสดงการจินตทัศน์ข้อมูล"):
    st.pie_chart(dx2)
    st.button("ไม่แสดงข้อมูล")
@@ -40,25 +38,25 @@ else:
 
 html_8="""
 <div style="background-color:#B160EC;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<center><h5>การทำนายข้อมูลดอกไม้</h5></center>
+<center><h5>การทำนายข้อมูลการเป็นโรคหัวใจ</h5></center>
 </div>
 """
 
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 
-pr = st.slider("กรุณาเลือกข้อมูล Pregnancies")
-gp = st.slider("กรุณาเลือกข้อมูล Glucose")
-bl = st.number_input("กรุณาเลือกข้อมูล BloodPressure")
-sn = st.number_input("กรุณาเลือกข้อมูล SkinThickness")
-il = st.slider("กรุณาเลือกข้อมูล Insulin")
-bi = st.slider("กรุณาเลือกข้อมูล BMI")
-di = st.number_input("กรุณาเลือกข้อมูล DiabetesPedigreeFunction")
-ae = st.number_input("กรุณาเลือกข้อมูล Age")
+st_len = st.slider("กรุณาเลือกข้อมูล Pregnancies")
+sd = st.slider("กรุณาเลือกข้อมูล Glucose")
+pt_len = st.number_input("กรุณาเลือกข้อมูล BloodPressure")
+wd = st.number_input("กรุณาเลือกข้อมูล SkinThickness")
+pt_len = st.number_input("กรุณาเลือกข้อมูล Insulin")
+wd = st.number_input("กรุณาเลือกข้อมูล BMI")
+pt_len = st.number_input("กรุณาเลือกข้อมูล DiabetesPedigreeFunction")
+wd = st.number_input("กรุณาเลือกข้อมูล Age")
 
 if  st.button("ทำนายผล]"):
     loaded_model = pickle.load(open('./data/trained_model.sav', 'rb'))
-    input_data =  (pr,gp,bl,sn,il,bi,di,ae)
+    input_data =  (st_len,sd,pt_len,wd)
     # changing the input_data to numpy array
     input_data_as_numpy_array = np.asarray(input_data)
     # reshape the array as we are predicting for one instance
@@ -72,6 +70,3 @@ if  st.button("ทำนายผล]"):
     st.button("ไม่แสดงข้อมูล")
 else:
     st.write("ไม่แสดงผลการทำนาย")
-
-
-
