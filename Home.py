@@ -9,7 +9,7 @@ import pickle
 
 html_8="""
 <div style="background-color:#B160EC;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<center><h5>การทำนายข้อมูลดอกไม้</h5></center>
+<center><h5>การทำนายข้อมูลการเป็นโรคหัวใจ</h5></center>
 </div>
 """
 st.image('./pic/add.png')
@@ -17,7 +17,7 @@ st.image('./pic/add.png')
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 
-dt=pd.read_csv("./data/iris.csv")
+dt=pd.read_csv("./data/diabetes.csv")
 st.write(dt.head(10))
 
 dt1=dt['petal.length'].sum()
