@@ -5,6 +5,9 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 import pickle
+from matplotlib import cm
+import matplotlib.pyplot as plt
+from IPython.core.display import display, HTML
 
 
 html_8="""
@@ -12,7 +15,7 @@ html_8="""
 <center><h5>การทำนายข้อมูลการเป็นโรคหัวใจ</h5></center>
 </div>
 """
-st.image('./pic/add.png')
+
 
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
@@ -67,9 +70,9 @@ if  st.button("ทำนายผล]"):
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction[0])
     if prediction == '1':
-        st.image('./pic/versicolor.jpg')
+        st.image('./pic/1.jpg')
     elif prediction == '0':
-        st.image('./pic/virginica.jpg')
+        st.image('./pic/0.jpg')
         st.button("ไม่แสดงข้อมูล")
 else:
     st.write("ไม่แสดงผลการทำนาย")
