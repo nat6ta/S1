@@ -7,6 +7,7 @@ import plotly.graph_objects as go
 import pickle
 
 
+
 html_8="""
 <div style="background-color:#B160EC;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h5>การทำนายข้อมูลการเป็นโรคหัวใจ</h5></center>
@@ -70,5 +71,6 @@ if  st.button("ทำนายผล]"):
     else:
         st.image('./pic/0.jpg')
     st.button("ไม่แสดงข้อมูล")
+    
 else:
     st.write("ไม่แสดงผลการทำนาย")
