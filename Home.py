@@ -30,7 +30,7 @@ dx=[dt1,dt2,dt3,dt4,dt5,dt6,dt7,dt8]
 dx2=pd.DataFrame(dx,index=["dt1","dt2","dt3","dt4","dt5","dt6","dt7","dt8"])
 
 if st.button("แสดงการจินตทัศน์ข้อมูล"):
-   st.pyplot(dx2)
+   st.line_chart(dx2)
    st.button("ไม่แสดงข้อมูล")
 else:
    st.write("ไม่แสดงข้อมูล")
