@@ -27,11 +27,12 @@ dt6=dt['BMI'].sum()
 dt7=dt['DiabetesPedigreeFunction'].sum()
 dt8=dt['Age'].sum()
 dx=[dt1,dt2,dt3,dt4,dt5,dt6,dt7,dt8]
-
 dx2=pd.DataFrame(dx,index=["dt1","dt2","dt3","dt4","dt5","dt6","dt7","dt8"])
+dx3=pd.DataFrame(dx,index=["dt1","dt2","dt3","dt4","dt5","dt6","dt7","dt8"])
 
 if st.button("แสดงการจินตทัศน์ข้อมูล"):
-   st.area_chart(dx2)
+   st.bar_chart(dx2)
+   st.bar_chart(dx3)
    st.button("ไม่แสดงข้อมูล")
 else:
    st.write("ไม่แสดงข้อมูล")
