@@ -66,8 +66,10 @@ if  st.button("ทำนายผล]"):
         st.image('./pic/1.jpg')
     #elif prediction == '0':
         #st.image('./pic/0.jpg')
-    else:
-        st.image('./pic/0.jpg')
+    #else:
+        #st.image('./pic/0.jpg')
+    else: prediction == '0'
+    st.image('./pic/0.jpg')
     st.button("ไม่แสดงข้อมูล")
     
 else:
