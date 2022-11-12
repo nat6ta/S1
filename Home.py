@@ -6,8 +6,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pickle
 
-
-
 html_8="""
 <div style="background-color:#B160EC;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h5>การทำนายข้อมูลการเป็นโรคหัวใจ</h5></center>
