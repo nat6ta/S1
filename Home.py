@@ -62,14 +62,15 @@ if  st.button("ทำนายผล]"):
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction[0])
-    if prediction == '1':
+
+    if prediction == 1:
         st.image('./pic/1.jpg')
     #elif prediction == '0':
         #st.image('./pic/0.jpg')
     #else:
         #st.image('./pic/0.jpg')
-    else: prediction == '0'
-    st.image('./pic/0.jpg')
+    else: 
+        st.image('./pic/0.jpg')
     st.button("ไม่แสดงข้อมูล")
     
 else:
