@@ -6,6 +6,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pickle
 
+st.image("./pic/c.png")
+
 html_8="""
 <div style="background-color:#B160EC;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h5>การทำนายข้อมูลการเป็นโรคเบาหวาน</h5></center>
@@ -28,9 +30,9 @@ dt7=dt['DiabetesPedigreeFunction'].sum()
 dt8=dt['Age'].sum()
 dx=[dt1,dt2,dt3,dt4,dt5,dt6,dt7,dt8]
 dx2=pd.DataFrame(dx,index=["dt1","dt2","dt3","dt4","dt5","dt6","dt7","dt8"])
+st.balloons()
 
 if st.button("แสดงการจินตทัศน์ข้อมูล"):
-   st.write(dt.head(20))
    st.bar_chart(dx2)
    st.button("ไม่แสดงข้อมูล")
 else:
