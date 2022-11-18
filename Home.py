@@ -48,7 +48,7 @@ html_8="""
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 option = st.selectbox(
-    'How would you like to be contacted?',
+    'อายุครรภ์?',
     ('0', '1', '2','3','4','5','6','7','8','9','10'))
 pr = st.write('กรุณาเลือกข้อมูล Pregnancies:', option)
 gs = st.number_input("กรุณาเลือกข้อมูล Glucose")
