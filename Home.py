@@ -31,8 +31,7 @@ dt8=dt['Age'].sum()
 dx=[dt1,dt2,dt3,dt4,dt5,dt6,dt7,dt8]
 #dx2=pd.DataFrame(dx,index=["dt1","dt2","dt3","dt4","dt5","dt6","dt7","dt8"])
 dx2 = pd.DataFrame(
-    np.random.randn(dx,index=["dt1","dt2","dt3","dt4","dt5","dt6","dt7","dt8"]),
-    columns=['1', '0'])
+    np.random.randn(dx,index=["dt1","dt2","dt3","dt4","dt5","dt6","dt7","dt8"]))
 
 if st.button("แสดงการจินตทัศน์ข้อมูล"):
    st.bar_chart(dx2)
