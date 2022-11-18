@@ -51,14 +51,15 @@ st.markdown("")
 #option = st.selectbox(
 #    'อายุครรภ์?',
 #    ('0', '1', '2','3','4','5','6','7','8','9','10'))
-pr  =st.write("กรุณาเลือกข้อมูล Pregnancies")
+pr = st.slider('อายุครรภ์?', 0, 10, 5)
+st.write("อายุครรภ์ ", age, 'เดือน')
 gs = st.number_input("กรุณาเลือกข้อมูล Glucose")
 bp = st.number_input("กรุณาเลือกข้อมูล BloodPressure")
 sk = st.number_input("กรุณาเลือกข้อมูล SkinThickness")
 iu = st.number_input("กรุณาเลือกข้อมูล Insulin")
 be = st.number_input("กรุณาเลือกข้อมูล BMI")
 de = st.number_input("กรุณาเลือกข้อมูล DiabetesPedigreeFunction")
-ae = st.number_input("กรุณาเลือกข้อมูล Age")
+ae = st.slider("กรุณาเลือกข้อมูล Age")
 
 if  st.button("ทำนายผล]"):
     loaded_model = pickle.load(open('./data/trained_model.sav', 'rb'))
