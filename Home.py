@@ -29,11 +29,15 @@ dt6=dt['BMI'].sum()
 dt7=dt['DiabetesPedigreeFunction'].sum()
 dt8=dt['Age'].sum()
 dx=[dt1,dt2,dt3,dt4,dt5,dt6,dt7,dt8]
-dx2=pd.DataFrame(dx,index=["dt1","dt2","dt3","dt4","dt5","dt6","dt7","dt8"])
+#dx2=pd.DataFrame(dx,index=[])
+chart_data = pd.DataFrame(
+    np.random.randn("dt1","dt2","dt3","dt4","dt5","dt6","dt7","dt8"),
+    columns=['1', '0'])
+
 
 
 if st.button("แสดงการจินตทัศน์ข้อมูล"):
-   st.bar_chart(dx2)
+   st.line_chart(chart_data)
    st.button("ไม่แสดงข้อมูล")
 else:
    st.write("ไม่แสดงข้อมูล")
