@@ -18,7 +18,7 @@ st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 
 dt=pd.read_csv("./data/diabetes.csv")
-st.write(dt.head(10))
+#st.write(dt.head(10))
 
 dt1=dt['Pregnancies'].sum()
 dt2=dt['Glucose'].sum()
