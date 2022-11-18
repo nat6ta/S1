@@ -51,10 +51,7 @@ st.markdown("")
 #option = st.selectbox(
 #    'อายุครรภ์?',
 #   ('0', '1', '2','3','4','5','6','7','8','9','10'))
-pr = st.selectbox(
-    'อายุครรภ์?',
-    ('0', '1', '2','3','4','5','6','7','8','9','10'))
-st.write("กรุณาเลือกข้อมูล Pregnancies")
+pr = st.number_input("กรุณาเลือกข้อมูล Pregnancies")
 gs = st.number_input("กรุณาเลือกข้อมูล Glucose")
 bp = st.number_input("กรุณาเลือกข้อมูล BloodPressure")
 sk = st.number_input("กรุณาเลือกข้อมูล SkinThickness")
