@@ -61,6 +61,7 @@ be = st.number_input("กรุณาเลือกข้อมูล BMI")
 de = st.number_input("กรุณาเลือกข้อมูล DiabetesPedigreeFunction")
 ae = st.slider("กรุณาเลือกข้อมูล Age")
 
+
 if  st.button("ทำนายผล]"):
     loaded_model = pickle.load(open('./data/trained_model.sav', 'rb'))
     input_data =  (pr,gs,bp,sk,iu,be,de,ae)
